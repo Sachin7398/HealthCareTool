@@ -7,6 +7,46 @@ body{
   background-color: rgba(195, 195, 195, 0.169);
 }
  
+
+/* pop */
+
+/* Popup styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: #fff;
+  width: 80%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.updatebutton:hover{
+  cursor: pointer;
+  background-color: #69cba0;
+  border-radius: 5px;
+  scale: 1.1;
+  transition-duration: 0.3s;
+}
+  
 /* Sidebar CSS */
 
 #sidebarToggle{
@@ -47,6 +87,7 @@ cursor: pointer;
  background: #69cba0;
  width: 27px;
  padding: 3px;
+ transition: 0.3s;
  border-radius: 3px;
 }
 
@@ -106,6 +147,7 @@ cursor: pointer;
   color: #fff;
   background-color: #69cba0;
   padding: 2px;
+  transition:0.3s;
   border-radius: 12px;
   font-weight:bold;
     
@@ -183,6 +225,13 @@ cursor: pointer;
   border-radius: 10px;
 }
 
+.hoverclass:hover {
+  cursor: pointer;
+  background-color: #69cba0;
+  border-radius: 5px;
+  scale: 1.1;
+  transition-duration: 0.3s;
+}
 .column1 .row1 a img{
  width: 120px;
  height: 120px;
@@ -206,11 +255,19 @@ cursor: pointer;
  
 }
 
+.info-table{
+  text-align: left;
+}
+
+.info-table td, .info-table th{
+  padding: 6px; 
+}
+
 .column1 .row2{
   padding: 20px;
   margin: 20px 30px;
   background-color: rgb(255, 255, 255);
-  height: 250px;
+  height: 290px;
   width: 300px;
   border-radius: 10px;
 }
@@ -311,13 +368,15 @@ margin-bottom: 15px;
   border-radius: 10px;
 }
 
+
 .column2 .row3 h3{
   margin: 20px;
  }
  
  .column2 .row3 .add input{
-  width: 800px;
+  width: 780px;
   padding: 20px;
+  cursor: pointer;
   border: 2px dashed #69cba055 ;
   border-radius: 10px;
   text-align: center;
@@ -329,8 +388,46 @@ margin-bottom: 15px;
   font-weight: bold;
  }
 
+ .table{
+  margin-top: 30px;
+  margin-left: 20px;
+
+ }
+ .presctionTable{
+  width: 750px;
+  text-align: left;
+  
+ }
+
+ .column2 .row3 .table img{
+  width: 40px;
+ }
+ 
+ .column2 .row3 .table .image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  align-items: center;
+  background-color: rgba(249, 86, 86, 0.098);
+  width: 55px;
+  height: 60px;
+ }
+
+.table th {
+    margin-bottom: 20px; /* Adjust the value according to your preference */
+}
+
+
+ .prescription{
+  display: flex;
+  align-items: center;
+  margin-top:20px;
+ 
+ }
 
  
- 
 
-
+ .prescription h4{
+ margin-left: 20px;
+ }

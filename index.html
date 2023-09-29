@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="responsive.css" /> -->
     <!-- box icon -->
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     <title>HealthCare Tool - Patient Page</title>
@@ -16,11 +17,11 @@
     <!-- Sidebar When Collapsed -->
     <div id="sidebar" class="sidebar ">
 
-        <a id="hamburger" class="bx bx-menu"
+        <a id="hamburger" class="bx bx-menu hoverclass"
             style="position: fixed;color:#ffffff; top: 10px; left: 10px; font-size: 30px;"></a>
 
-        <div class="nav_list">
-            <a href="#"><i class="bx bxs-dashboard" style="color: #ffffff"></i></a>
+        <div class="nav_list ">
+            <a href="#"><i class="bx bxs-dashboard " style="color: #ffffff"></i></a>
             <a href="#"><i class="bx bxs-group" style="color: #ffffff"></i></a>
             <a href="#"><i class="bx bx-stats" style="color: #ffffff"></i></a>
             <a href="#"><i class='bx bx-notepad' style='color:#ffffff'></i></a>
@@ -84,13 +85,14 @@
     <!-- Content -->
     <div class="wrapper">
         <div class="header">
-            <p><span>&#8592</span> Back to dashboard</p>
+            <p class="hoverclass popupButton"><span>&#8592</span> Back to dashboard</p>
 
             <div class="user">
-                <div class="notification">
+                <div class="hoverclass notification popupButton">
                     <i class='bx bx-bell'></i>
                 </div>
-                <i class='bx bxs-user-circle my'></i><span>Dr.Alex Hess</span><i class='bx bx-chevron-down my'></i>
+                
+                <i class=' bx bxs-user-circle hoverclass my popupButton'></i><span class="hoverclass popupButton" >Dr.Alex Hess</span><i class='bx bx-chevron-down my hoverclass popupButton '></i>
 
             </div>
         </div>
@@ -104,36 +106,62 @@
                 <div class="row1">
                     <a href="#"><img src="man.png" alt="Roger"></a>
                     <h3>Roger Curtis</h3>
-                    <p>Age:55</p>
-                    <button class="btn">Update</button>
+                    <p>Age:36</p>
+                    <button class="btn popupButton  updatebutton">Update</button>
                 </div>
 
-                <div class="row2">
+                <div class="row2 ">
                     <h3>Information:</h3>
-                    <p><span>Gender:</span>Male</p>
-                    <p><span>BloodType:</span>O+ [Positive]:</p>
-                    <p><span>Allergies:</span>Milk,Pencilin</p>
-                    <p><span>Diseases:</span>Diabetes,Blood Didorders</p>
-                    <p><span>Height:</span>178m</p>
-                    <p><span>Weight:</span>65Kg</p>
-                    <p><span>Patient ID:</span>208898786</p>
-                    <p><span>Last Visit:</span>25 October 2019</p>
-
+                
+                    <table class="info-table">
+                        <tr>
+                            <th>Gender:</th>
+                            <td>Male</td>
+                        </tr>
+                        <tr>
+                            <th>Blood Type:</th>
+                            <td>O+ [Positive]</td>
+                        </tr>
+                        <tr>
+                            <th>Allergies:</th>
+                            <td>Milk, Penicillin</td>
+                        </tr>
+                        <tr>
+                            <th>Diseases:</th>
+                            <td>Diabetes, Blood Disorders</td>
+                        </tr>
+                        <tr>
+                            <th>Height:</th>
+                            <td>178 cm</td>
+                        </tr>
+                        <tr>
+                            <th>Weight:</th>
+                            <td>65 Kg</td>
+                        </tr>
+                        <tr>
+                            <th>Patient ID:</th>
+                            <td>208898786</td>
+                        </tr>
+                        <tr>
+                            <th>Last Visit:</th>
+                            <td>25 October 2019</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <div class="column2">
                 <div class="row1">
-                    <div class="box">
+                    <div  class="box hoverclass popupButton">
                         <img src="heart-rate.png" alt="Heart-Rate">
                         <h4>Heart Rate</h4>
                         <p>80bpm</p>
                     </div>
-                    <div class="box">
+                    <div class="box hoverclass popupButton">
                         <img src="hot.png" alt="Heart-Rate">
                         <h4>Body Temperature</h4>
                         <p>36.5&degC</p>
                     </div>
-                    <div class="box">
+                    <div class="box hoverclass popupButton">
                         <img src="test-tube.png" alt="Heart-Rate">
                         <h4>Glucose</h4>
                         <p>100mg/dl</p>
@@ -143,7 +171,7 @@
                 <div class="row2">
                     <h3>Test Reports</h3>
                     <div class="contain">
-                        <div class="box">
+                        <div  class="box hoverclass popupButton">
                             <div class="image">
                                 <img src="report1.png" alt="Report-1">
                             </div>
@@ -152,7 +180,7 @@
                                 <p>12th February 2020</p>
                             </div>
                         </div>
-                        <div class="box">
+                        <div class="box hoverclass popupButton">
                             <div class="image">
                                 <img src="report2.png" alt="Report-1">
                             </div>
@@ -161,7 +189,7 @@
                                 <p>12th February 2020</p>
                             </div>
                         </div>
-                        <div class="box">
+                        <div class="box hoverclass popupButton">
                             <div class="image">
                                 <img src="report3.png" alt="Report-1">
                             </div>
@@ -175,34 +203,41 @@
 
                 <div class="row3">
                     <h3>Prescriptions</h3>
-                    <div class="add">
+                    <div class="add popupButton ">
                       <input type="text" placeholder="+ Add a prescription">
                     </div>
 
-                    <div class="table">
-                        <table>
-                            <tr>
-                              <th>Company</th>
-                              <th>Contact</th>
-                              <th>Country</th>
+                    <div class="table ">
+                        <table class=" presctionTable" >
+                            <tr class="tableH">
+                              <th>Prescription</th>
+                              <th>Date</th>
+                              <th>Duration</th>
                             </tr>
                             <tr>
-                              <td>Alfreds Futterkiste</td>
-                              <td>Maria Anders</td>
-                              <td>Germany</td>
+                              <td class="prescription"><hr><div class="image"><img src="word.png" alt="Prescription"></div><h4>Heart Diseases</h4></td>
+                              <td>25 october 2019</td>
+                              <td>3 Month</td>
                             </tr>
+                        
                             <tr>
-                              <td>Centro comercial Moctezuma</td>
-                              <td>Francisco Chang</td>
-                              <td>Mexico</td>
+                              <td class="prescription"><div class="image"><img src="word.png" alt="Prescription"></div><span><h4>Skin Care</h4></span></td>
+                              <td>08 August 2019</td>
+                              <td>2 Month</td>
                             </tr>
                           </table>
                     </div>
-
-
                 </div>
             </div>
         </div>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+              <span class="close">&times;</span>
+              <h2>Coming Soon!</h2>
+              <p>Our website is under construction. Stay tuned for updates!</p>
+            </div>
+          </div>
 
     </div>
 
