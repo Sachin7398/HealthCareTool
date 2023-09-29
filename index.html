@@ -1,74 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <!-- bx icon -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <!-- box icon -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     <title>HealthCare Tool - Patient Page</title>
-  </head>
-  <!-- structure -->
-  <body>
-    <div id="mynav" class="sidenav">
-      <div class="log_cont">
-        <div class="logo ">
-          <img src="" style="width: 100px;" alt="">
+</head>
+
+<body>
+
+    <!-- Sidebar When Collapsed -->
+    <div id="sidebar" class="sidebar ">
+
+        <a id="hamburger" class="bx bx-menu"
+            style="position: fixed;color:#ffffff; top: 10px; left: 10px; font-size: 30px;"></a>
+
+        <div class="nav_list">
+            <a href="#"><i class="bx bxs-dashboard" style="color: #ffffff"></i></a>
+            <a href="#"><i class="bx bxs-group" style="color: #ffffff"></i></a>
+            <a href="#"><i class="bx bx-stats" style="color: #ffffff"></i></a>
+            <a href="#"><i class='bx bx-notepad' style='color:#ffffff'></i></a>
+            <a href="#"><i class='bx bx-calendar-plus' style='color:#ffffff'></i></a>
+            <a href="#"><i class='bx bx-folder' style='color:#ffffff'></i></a>
         </div>
-      </div>
-
-      <ul class="nav_list ">
-        <li class="listData">
-          <a href="#">
-            <i class="bx bxs-dashboard" style="color: #ffffff"></i>
-            <span class="elments_link"> Dashboard </span>
-          </a>
-        </li>
-        <li class="listData">
-          <a href="#">
-            <i class="bx bxs-group"></i>
-            <span class="elments_link">People</span>
-          </a>
-        </li>
-
-        <li class="listData">
-          <a href="#">
-            <i class="bx bx-stats" style="color: #ffffff"></i>
-            <span class="elments_link">Health stats</span>
-          </a>
-        </li>
-
-        <li class="listData">
-          <a href="#">
-            <i class='bx bx-notepad' style='color:#ffffff' ></i>
-            <span class="elments_link">Records</span>
-          </a>
-        </li>
-
-        <li class="listData">
-          <a href="#">
-            <i class='bx bx-calendar-plus' style='color:#ffffff' ></i>
-            <span class="elments_link">Book Appointment</span>
-          </a>
-        </li>
-
-        <li class="listData">
-          <a href="#">
-            <i class='bx bx-folder' style='color:#ffffff' ></i>
-            <span class="elments_link">See Appointment</span>
-          </a>
-        </li>
-
-      </ul>
-      <!-- bottom code -->
     </div>
-  </body>
+
+    <!-- Sidebar-end When Collapsed -->
+
+    <!-- Sidebar When open -->
+    <div id="sidenav" class="sidenav ">
+
+        <a id="sidebarToggle" style="position: fixed;color:#ffffff; top: 10px; left: 10px; font-size: 24px;"> &#9587</a>
+
+        <div class="logo">
+            <a href="#">HealthCare</a>
+        </div>
+
+        <ul class="nav_list">
+            <li class="listData">
+                <a href="#">
+                    <i class="bx bxs-dashboard" style="color: #ffffff;left: 3px;font-size: 24px"></i>
+                    <span class="elments_link"> Dashboard </span>
+                </a>
+            </li>
+            <li class="listData">
+                <a href="#">
+                    <i class="bx bxs-group" style="color: #ffffff;font-size: 24px;"></i>
+                    <span class="elments_link">People</span>
+                </a>
+            </li>
+            <li class="listData">
+                <a href="#">
+                    <i class="bx bx-stats" style="color: #ffffff;font-size: 24px;"></i>
+                    <span class="elments_link">Health stats</span>
+                </a>
+            </li>
+            <li class="listData">
+                <a href="#">
+                    <i class='bx bx-notepad' style='color:#ffffff;font-size: 24px;'></i>
+                    <span class="elments_link">Records</span>
+                </a>
+            </li>
+            <li class="listData">
+                <a href="#">
+                    <i class='bx bx-calendar-plus' style='color:#ffffff;font-size: 24px;'></i>
+                    <span class="elments_link">Book Appointment</span>
+                </a>
+            </li>
+            <li class="listData">
+                <a href="#">
+                    <i class='bx bx-folder' style='color:#ffffff;font-size: 24px;'></i>
+                    <span class="elments_link">See Appointment</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Sidebar-end When open -->
+
+    <!-- Content -->
+    <div class="wrapper">
+        <div class="header">
+            <p><span>&#8592</span> Back to dashboard</p>
+
+            <div class="user">
+                <div class="notification">
+                    <i class='bx bx-bell'></i>
+                </div>
+                <i class='bx bxs-user-circle my'></i><span>Dr.Alex Hess</span><i class='bx bx-chevron-down my'></i>
+
+            </div>
+        </div>
+        <div class="heading">
+            <h2>Current Appointment</h2>
+
+        </div>
+
+        <div class="content">
+            <div class="column1">
+                <div class="row1">
+                    <a href="#"><img src="man.png" alt="Roger"></a>
+                    <h3>Roger Curtis</h3>
+                    <p>Age:55</p>
+                    <button class="btn">Update</button>
+                </div>
+
+                <div class="row2">
+                    <h3>Information:</h3>
+                    <p><span>Gender:</span>Male</p>
+                    <p><span>BloodType:</span>O+ [Positive]:</p>
+                    <p><span>Allergies:</span>Milk,Pencilin</p>
+                    <p><span>Diseases:</span>Diabetes,Blood Didorders</p>
+                    <p><span>Height:</span>178m</p>
+                    <p><span>Weight:</span>65Kg</p>
+                    <p><span>Patient ID:</span>208898786</p>
+                    <p><span>Last Visit:</span>25 October 2019</p>
+
+                </div>
+            </div>
+            <div class="column2">
+                <div class="row1">
+                    <div class="box">
+                        <img src="heart-rate.png" alt="Heart-Rate">
+                        <h4>Heart Rate</h4>
+                        <p>80bpm</p>
+                    </div>
+                    <div class="box">
+                        <img src="hot.png" alt="Heart-Rate">
+                        <h4>Body Temperature</h4>
+                        <p>36.5&degC</p>
+                    </div>
+                    <div class="box">
+                        <img src="test-tube.png" alt="Heart-Rate">
+                        <h4>Glucose</h4>
+                        <p>100mg/dl</p>
+                    </div>
+                </div>
+
+                <div class="row2">
+                    <h3>Test Reports</h3>
+                    <div class="contain">
+                        <div class="box">
+                            <div class="image">
+                                <img src="report1.png" alt="Report-1">
+                            </div>
+                            <div class="report">
+                                <h4>City Scan -Full Body</h4>
+                                <p>12th February 2020</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="image">
+                                <img src="report2.png" alt="Report-1">
+                            </div>
+                            <div class="report">
+                                <h4>Creatine Kinase T</h4>
+                                <p>12th February 2020</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="image">
+                                <img src="report3.png" alt="Report-1">
+                            </div>
+                            <div class="report">
+                                <h4>Eye Fluorescein Test</h4>
+                                <p>12th February 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row3">
+                    <h3>Prescriptions</h3>
+                    <div class="add">
+                      <input type="text" placeholder="+ Add a prescription">
+                    </div>
+
+                    <div class="table">
+                        <table>
+                            <tr>
+                              <th>Company</th>
+                              <th>Contact</th>
+                              <th>Country</th>
+                            </tr>
+                            <tr>
+                              <td>Alfreds Futterkiste</td>
+                              <td>Maria Anders</td>
+                              <td>Germany</td>
+                            </tr>
+                            <tr>
+                              <td>Centro comercial Moctezuma</td>
+                              <td>Francisco Chang</td>
+                              <td>Mexico</td>
+                            </tr>
+                          </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script src="index.js"></script>
+
 </html>

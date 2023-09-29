@@ -3,246 +3,334 @@
     padding: 0;
 }
 
-header {
-    z-index:999;
-    position:absolute;
-    top:0;  
-    left:0;
-    width:100%;
-    /* padding: 30px 100px; */
-    display: flex ;
-    justify-content:space-between   ;
-    
-}
-
-
-
-.find{
-    position:absolute;
-    top: 1%;
-    left: 22%;
-    background:#3a3c3f;
-    /* transform:translate(-50%, -50%); */
-   height: 20px;
-   
-   border-radius: 10px;
-   padding:8px;
-   
-  box-shadow:  0 0 10px  rgba(0,0,0,0.6);
-      -moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
-      -webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
-      -o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
-}
-.find:hover > .search-txt{
-    width:250px;
-    padding: 1px;
+body{
+  background-color: rgba(195, 195, 195, 0.169);
 }
  
-.search-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:#e2e2e2;
-    float: left;
-    width:20px;
-    height:20px;
-    
-    border-radius:20%;
-    text-decoration: none;
+/* Sidebar CSS */
+
+#sidebarToggle{
+  margin-top: 5px;
+  margin-left: 190px;
+  font-weight: bold;
 }
 
-
-.search-txt {
-    border:none;
-    background:none;
-    outline:none;
-    float:right;
-    padding-left: 0px;
-    color:rgb(255, 255, 255);
-    font-size: 18px;
-    transition: 0.4s;
-    line-height:-5px;
-    width: 58px;
-}
-.top{
-    display : flex ;
-    margin: 0px;
-    padding: 25px;
-    
-    background:hsla(0, 0%, 0%, 0.877);
+#sidebarToggle:hover{
+cursor: pointer;
 }
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 25px;
+  background-color:#0a586c;
+  padding: 6px 14px;
+}
 
-  .sidenav
-  { position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 246px;
-    background-color:#0a586c;
-    padding: 6px 14px;
-  }
-  /* .sidenav a {
-    padding: 0px 0px 0px 0px;
-    text-decoration: none;
-    font-size: 18;
-    color: #eeeeee;
-    
-    
-  } */
-  
- 
-  
- 
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-
-  /* .log_link{
-    display: flex;
-  } */
-
-
-
-.sidenav .log_cont  .logo
-{
-  color: #fff;
+.sidebar .nav_list{
+  margin-top: 60px;
+  margin-left:0;
   display: flex;
-  height: 50px;
-  width: 100%;
-  align-items: center;
+  flex-direction: column;
+}
+.sidebar .nav_list a{
+ margin: 20px 0;
+}
+.sidebar .nav_list a i {
+ height: 10px;
+ font-size:20px;
+
+}
+.sidebar .nav_list a:hover{
+ background: #69cba0;
+ width: 27px;
+ padding: 3px;
+ border-radius: 3px;
 }
 
-.log_cont .logo i{
-  font-size: 28px;
-  margin: 5px;
+.sidenav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 230px;
+  background-color:#0a586c;
+  padding: 6px 14px;
+  display: none;
+  transition: all ease-in 0.5s;
+  }
+
+.nav_list{
+  margin-top: 40px;
+  margin-left:0;
 }
 
-.log_cont  .logo .NameLogo{
-  font-size: 20px;
-  font-weight: 400;
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-
-/* button side  */
-
-.sidenav #btn{
-  position: absolute;
-    top: 138px;
-    left: 274px;
-    color: rgb(124, 14, 14);
-    font-size: 40px;
-    text-align: center;
-    line-height: 50px;
-    transform: translateX(-50%);
+.logo a{
+  color: #fff;
+ text-decoration: none;
 }
 
 .sidenav ul li{
-position: relative;
-list-style: none;
-height: 42px;
-width: 100%;
-margin:0px 5px;
-line-height: 42px;
+  position: relative;
+  list-style: none;
+  height: 42px;
+  width: 100%;
+  line-height: 42px;
 
 }
 
-
 .sidenav ul li a{
-  padding: 0px 0px 0px 32px;
   display: flex;
   height: 50px;
+  margin: 10px 0;
   align-items: center;
   text-decoration: none;
   color:rgb(248, 248, 248);
-  transition: all 0.4s ease ;
  
-  
-  }
-  .sidenav ul li a:hover {
-    color: #fff;
-    background-color: #69cba0;
-    padding: 2px;
-    border-radius: 12px;
-    /* font:caption; */
-    font-weight:bold;
-    
-  }
-
-
-
-  .sidenav ul li a i{
-   
-    height: 50px;
-    min-width: 50px;
-    border-radius: 15px;
-    line-height: 50px;
-    
-  }
-
-
-  .sidenav .login{
-    position:absolute;
-    color: #fff;
-    bottom: 58px;
-    left: 27px;
-  }
-  
-  .sidenav .login  .login_lis{
-    position: relative;
-    padding: 10px 6px;
-    height: 60px;
 }
 
-.login  .login_lis .signup_lis{
-  
-  align-items: center;
+.sidenav ul li a span{
+  font-size: 20px;
+ 
 }
 
-.login  .login_lis .signup_lis .login_item{
- 
-  margin-left: -7px;
+.sidenav ul li a:hover {
   color: #fff;
-  background-color: #DC143C;
-  padding: 0;
-  text-align: center;
+  background-color: #69cba0;
+  padding: 2px;
+  border-radius: 12px;
+  font-weight:bold;
+    
+}
+
+.sidenav ul li a i{
+  height: 50px;
+  min-width: 50px;
+  border-radius: 15px;
+  line-height: 50px;
+    
+}
+
+  /* Content CSS */
+
+.wrapper{
+  margin-left: 53px;
+}
+
+.header{
+  height: 3em;
+  width: auto;
+  display: flex;
   align-items: center;
-  border-radius: 22px;
-  font: caption;
-  width: 209px;
-  height: 45px;
+  justify-content: space-between;
+}
+
+.header p{
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+.header p span{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.user{
+ display: flex;
+ align-items: center;
+}
+
+.user span{
+  font-size: 18px;
+}
+
+.notification{
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.my{
+  margin: 10px;
+  font-size: 25px;
+}
+
+.heading{
+  margin: 0 40px;
+}
+
+.content{
+  display: flex;
+}
+
+.column1 .row1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px 30px;
+  background-color: rgb(255, 255, 255);
+  height: 220px;
+  width:300px;
+  border-radius: 10px;
+}
+
+.column1 .row1 a img{
+ width: 120px;
+ height: 120px;
+ border-radius: 12px;
+ margin-top: 15px;
+}
+
+.column1 .row1 h3{
+  margin: 10px;
+}
+.column1 .row1 .btn{
+  background-color: #69cba0;
+  color: #fff;
+  font-size:14px;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 120px;
+  border: none;
+  padding: 10px;
+  margin: 15px ;
+ 
+}
+
+.column1 .row2{
+  padding: 20px;
+  margin: 20px 30px;
+  background-color: rgb(255, 255, 255);
+  height: 250px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.column1 .row2 h3{
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-size: 21px;
+}
+
+.column1 .row2 p{
+  margin: 10px;
+}
+
+.column1 .row2 p span{
+  margin-right:50px ;
+  font-weight: bold;
+  text-align: justify;
+}
+
+.column2 .row1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px ;
+}
+
+.column2 .row1 .box img{
+  width: 30px;
+  margin: 15px 0;
+}
+
+.column2 .row1 .box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 10px;
+  width: 250px;
+  height: 120px;
+  margin: 0 12px;
+  border-radius: 10px;
+}
+
+.column2 .row1 .box h4{
+margin-bottom: 15px;
+}
+.column2 .row1 .box p{
+  font-size: 25px;
   font-weight: bold;
 
 }
 
-.login  .login_lis .signuplog{
-  position: absolute;
-  font-size: 18px;
-  font-weight: 1000;
-  left: 66px;
-  top: 18px;
-  width: auto;
-  margin: 0;
-  text-align: center;
+.column2 .row2{
+  background-color: #fff;
+  padding: 10px;
+  margin: 20px 10px;
+  border-radius: 10px;
+}
+
+.column2 .row2 h3{
+ margin: 20px;
+}
+
+.column2 .row2 .contain{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.column2 .row2 .box{
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  justify-content: center;
+}
+
+.column2 .row2 .box .image{
+ background-color: rgba(78, 78, 245, 0.084);
+ border-radius: 8px;
+ width: 50px;
+ margin: 0px 15px;
+ height: 60px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 
 }
-.login  a{
-  text-decoration: none;
-  color: #e2e2e2;
+.column2 .row2 .box img{
+ width: 35px;
 }
-.sidenav .log_link{
-  margin: 15px 7px;
+
+.column2 .row3{
+  background-color: #fff;
+  padding: 10px;
+  margin: 20px 10px;
+  border-radius: 10px;
+}
+
+.column2 .row3 h3{
+  margin: 20px;
+ }
  
-}
-  
-  .already{
-      display: flex;
-      color: rgb(255, 255, 255);
-    }
-  
-    .log_already{
-      margin: 0px 9px;
-      font-size: 15px;
-    }
+ .column2 .row3 .add input{
+  width: 800px;
+  padding: 20px;
+  border: 2px dashed #69cba055 ;
+  border-radius: 10px;
+  text-align: center;
+ }
+
+ .column2 .row3 .add input::placeholder{
+  color: #69cba0;
+  font-size: 15px;
+  font-weight: bold;
+ }
+
+
+ 
+ 
+
+
